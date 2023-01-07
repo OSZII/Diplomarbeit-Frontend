@@ -4,7 +4,7 @@
   export let active: boolean = false;
 </script>
 
-<a class="text-3xl relative group hover:cursor-pointer" href={url}>
+<a class="2xl:text-3xl relative group hover:cursor-pointer" href={url}>
   <p>
     {text}
   </p>

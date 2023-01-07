@@ -1,12 +1,15 @@
-<script>
+<script lang="ts">
+  import { enhance } from "$app/forms";
+
   // @ts-nocheck
 
   import AlternativeLogin from "$lib/components/AlternativeLogin.svelte";
   import Input from "$lib/components/Input.svelte";
-  export let header;
+  export let header: string;
 </script>
 
 <form
+  use:enhance
   method="POST"
   class="bg-black/50 backdrop-blur-[60px] h-full rounded-[10px] text-white flex flex-col items-center justify-evenly px-[95px]"
 >
