@@ -52,7 +52,13 @@
         active={$page.url.pathname == "/sensorvalues"}
       />
     {/if}
-    <div class="flex gap-5">
+
+    <div
+      class="flex gap-5 {$page.url.pathname == '/login' ||
+      $page.url.pathname == '/register'
+        ? 'hidden'
+        : ''}"
+    >
       <a href="/logout">
         <img src="/images/settingsIcon.png" alt="" />
       </a>

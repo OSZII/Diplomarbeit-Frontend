@@ -1,12 +1,6 @@
 <script>
   import OverviewWeatherComponent from "./../../lib/components/OverviewWeatherComponent.svelte";
   import BadgesContainer from "./../../lib/components/BadgesContainer.svelte";
-  import SmallWeatherCardContainer from "$lib/components/SmallWeatherCardContainer.svelte";
-  import OverviewGraph from "$lib/components/OverviewGraph.svelte";
-  import GraphOptions from "$lib/components/GraphOptions.svelte";
-  import MainWeatherCard from "$lib/components/MainWeatherCard.svelte";
-  import SmallWeatherCard from "$lib/components/SmallWeatherCard.svelte";
-  let cardBGColor = "bg-[#E09940]/50 rounded-[10px] backdrop-blur-[60px]";
 </script>
 
 <div class="flex flex-col px-[10px]">

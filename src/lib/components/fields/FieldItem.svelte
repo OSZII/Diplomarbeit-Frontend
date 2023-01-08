@@ -1,6 +1,28 @@
-<script lang>
+<script lang="ts">
   import SimpleSensorComponent from "./../sensors/SimpleSensorComponent.svelte";
-  export let field;
+
+  type Sensor = {
+    id: string;
+    type: string;
+    name: string;
+  };
+
+  type Field = {
+    User: {
+      firstName: string;
+      lastName: string;
+    };
+    area: Number;
+    description: string;
+    id: string;
+    latitude: string;
+    longitude: string;
+    name: string;
+    sensors: Sensor[];
+    unit: string;
+  };
+
+  export let field: Field;
 
   $: showDetails = false;
 
@@ -34,11 +56,13 @@
     <div class="flex flex-col w-full">
       <div class="w-full">
         <p class="text-2xl">Id: {field.id}</p>
-        <p class="text-2xl">{"Field Owner: <firstname> <lastname>"}</p>
+        <p class="text-2xl">
+          Field Owner: {field.User.firstName + " " + field.User.lastName}
+        </p>
       </div>
       <!-- Sensorcontainer -->
       <div
-        class="scrollbar scrollbar-thin-w-[3px] flex flex-wrap justify-center gap-1 overflow-y-scroll rounded-[10px] max-h-[200px] bg-[#a89e30]"
+        class="scrollbar scrollbar-thin-w-[3px] py-1 flex flex-wrap justify-center gap-1 overflow-y-scroll rounded-[10px] max-h-[200px] bg-[#a89e30]"
       >
         {#each field.sensors as sensor}
           <!-- content -->

@@ -1,6 +1,19 @@
 <script lang="ts">
-  export let name: string;
-  export let type: string;
+  type SensorValue = {
+    sensorId: string;
+    timeStamp: string;
+    value: string;
+    Sensor: {
+      field: {
+        id: string;
+        userId: string;
+      };
+    };
+  };
+
+  export let sensorValue: SensorValue;
+
+  console.log(sensorValue);
 
   $: showDetails = false;
 
@@ -23,10 +36,10 @@
   >
     <div class="flex gap-10 items-center">
       <img class="h-[50px] w-[50px]" src="/icons/sensorValueIcon.svg" alt="" />
-      <p>{name}</p>
+      <p>{sensorValue.timeStamp}</p>
     </div>
     <div class="flex">
-      <p>{type}</p>
+      <p>{sensorValue.value}</p>
     </div>
   </button>
   <!-- #endregion -->
@@ -34,9 +47,9 @@
   {#if showDetails}
     <div class="flex flex-col w-full gap-5">
       <div>
-        <p class="text-2xl">{"Field Owner: <firstname> <lastname>"}</p>
-        <p class="text-2xl">{"SensorId: <sensorId>"}</p>
-        <p class="text-2xl">{"FieldId: <fieldId>"}</p>
+        <p class="text-2xl">UserId: {sensorValue.Sensor.field.userId}</p>
+        <p class="text-2xl">SensorId: {sensorValue.sensorId}</p>
+        <p class="text-2xl">FieldId: {sensorValue.Sensor.field.id}</p>
       </div>
     </div>
   {/if}
