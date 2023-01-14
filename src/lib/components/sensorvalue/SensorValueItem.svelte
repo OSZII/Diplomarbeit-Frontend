@@ -13,8 +13,6 @@
 
   export let sensorValue: SensorValue;
 
-  console.log(sensorValue);
-
   $: showDetails = false;
 
   function toggleDetails() {
