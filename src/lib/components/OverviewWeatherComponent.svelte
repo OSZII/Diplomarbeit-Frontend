@@ -56,7 +56,6 @@
     <OverviewGraph {weather} />
   {:else}
     <SmallWeatherCardContainer placeholder={true} />
-    <GraphOptions />
     <OverviewGraph placeholder={true} />
   {/if}
 </div>

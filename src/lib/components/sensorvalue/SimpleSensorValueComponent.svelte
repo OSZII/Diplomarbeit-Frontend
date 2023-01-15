@@ -1,8 +1,6 @@
 <script lang="ts">
-  type SensorValue = {
-    timeStamp: string;
-    value: string;
-  };
+  import type { SensorValue } from "$lib/types";
+
   export let sensorValue: SensorValue;
 </script>
 

@@ -1,26 +1,6 @@
 <script lang="ts">
+  import type { Field } from "$lib/types";
   import SimpleSensorComponent from "./../sensors/SimpleSensorComponent.svelte";
-
-  type Sensor = {
-    id: string;
-    type: string;
-    name: string;
-  };
-
-  type Field = {
-    User: {
-      firstName: string;
-      lastName: string;
-    };
-    area: Number;
-    description: string;
-    id: string;
-    latitude: string;
-    longitude: string;
-    name: string;
-    sensors: Sensor[];
-    unit: string;
-  };
 
   export let field: Field;
 

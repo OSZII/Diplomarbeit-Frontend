@@ -1,16 +1,7 @@
 <script lang="ts">
+  import type { WeatherData } from "$lib/types";
   import { Chart } from "chart.js/auto";
   import { onMount } from "svelte";
-  type WeatherData = {
-    current_weather: Object;
-    hourly: {
-      relativehumidity_2m: Number[];
-      temperature_2m: Number[];
-      time: string[];
-      weathercode: Number[];
-      windspeed_10m: Number[];
-    };
-  };
 
   export let placeholder: Boolean = false;
 

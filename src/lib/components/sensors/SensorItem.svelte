@@ -4,22 +4,8 @@
   import SimpleSensorValueComponent from "../sensorvalue/SimpleSensorValueComponent.svelte";
   import { Line } from "svelte-chartjs";
   import "chart.js/auto";
-  type Sensor = {
-    field: {
-      id: string;
-      User: {
-        firstName: string;
-        lastName: string;
-      };
-    };
-    id: string;
-    name: string;
-    sensorValues: {
-      timeStamp: string;
-      value: string;
-    }[];
-    type: string;
-  };
+  import type { Sensor } from "$lib/types";
+  import SensorValueItem from "../sensorvalue/SensorValueItem.svelte";
 
   export let sensor: Sensor;
 

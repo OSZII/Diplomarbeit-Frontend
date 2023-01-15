@@ -1,11 +1,5 @@
 <script lang="ts">
-  type CurrentWeather = {
-    temperature: Number;
-    time: Date;
-    weathercode: Number;
-    winddirection: Number;
-    windspeed: Number;
-  };
+  import type { CurrentWeather } from "$lib/types";
 
   export let currentWeather: CurrentWeather | null = null;
   export let humidity: Number | null = null;

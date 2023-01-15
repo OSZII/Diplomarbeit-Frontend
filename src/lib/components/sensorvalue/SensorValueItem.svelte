@@ -1,15 +1,5 @@
 <script lang="ts">
-  type SensorValue = {
-    sensorId: string;
-    timeStamp: string;
-    value: string;
-    Sensor: {
-      field: {
-        id: string;
-        userId: string;
-      };
-    };
-  };
+  import type { SensorValue } from "$lib/types";
 
   export let sensorValue: SensorValue;
 

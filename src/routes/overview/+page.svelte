@@ -1,6 +1,6 @@
 <script>
-  import OverviewWeatherComponent from "./../../lib/components/OverviewWeatherComponent.svelte";
-  import BadgesContainer from "./../../lib/components/BadgesContainer.svelte";
+  import OverviewWeatherComponent from "$lib/components/OverviewWeatherComponent.svelte";
+  import BadgesContainer from "$lib/components/BadgesContainer.svelte";
 </script>
 
 <div class="flex flex-col px-[10px]">

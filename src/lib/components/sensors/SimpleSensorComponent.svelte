@@ -1,9 +1,5 @@
 <script lang="ts">
-  type Sensor = {
-    id: string;
-    type: string;
-    name: string;
-  };
+  import type { Sensor } from "$lib/types";
 
   export let sensor: Sensor;
 </script>

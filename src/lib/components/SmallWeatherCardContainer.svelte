@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { WeatherData } from "$lib/types";
   import SmallWeatherCard from "./SmallWeatherCard.svelte";
 
   let days = [
@@ -10,17 +11,6 @@
     "Saturday",
     "Sunday",
   ];
-
-  type WeatherData = {
-    current_weather: Object;
-    hourly: {
-      relativehumidity_2m: Number[];
-      temperature_2m: Number[];
-      time: string[];
-      weathercode: Number[];
-      windspeed_10m: Number[];
-    };
-  };
 
   export let weatherData: WeatherData | null = null;
 

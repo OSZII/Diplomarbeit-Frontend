@@ -1,5 +1,5 @@
 <script>
-  import NavLink from "./../lib/components/NavLink.svelte";
+  import NavLink from "$lib/components/NavLink.svelte";
   import "../app.css";
   import { page } from "$app/stores";
   import { text } from "svelte/internal";
