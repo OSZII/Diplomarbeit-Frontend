@@ -38,7 +38,15 @@ export const actions: Actions = {
 
     let responseData = await response.json();
 
+    console.log("responseData");
+
     console.log(responseData);
+    if (
+      responseData.statusCode == 401 &&
+      responseData.message == "Unauthorized"
+    ) {
+      return fail(400, { error: "Username or Password wrong!" });
+    }
 
     if (responseData.access_token) {
       cookies.set("token", `Bearer ${responseData.access_token}`, {

@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"animate.css": "^4.1.1",
 		"chart.js": "^4.0.0",
 		"svelte-chartjs": "^3.1.0"
 	}
